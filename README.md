@@ -1,7 +1,7 @@
 <h1 style="text-align:center">Morse Encryptor and Decryptor</h1> 
 
 <div style="text-align:center">
-  <img src="icon/morse_icon.png" alt="Colorful Icon" style="filter: saturate(200%) contrast(150%) brightness(120%);">
+  <img src="images/morse_icon.png" alt="Colorful Icon" style="filter: saturate(200%) contrast(150%) brightness(120%);">
 </div>
 
 ---
@@ -23,13 +23,22 @@ Welcome to the Morse Encryptor and Decryptor tool! This tool allows you to encod
 4. To change the input field, right-click on the desired input.
 5. Enjoy the magic of Morse code communication!
 
-![Screenshot of the Tool](icon/example.png)
+![Screenshot of the Tool](images/example.png)
 
 ## Installation
 
 1. Clone this repository to your local machine. Python 3.10 or above must be installed
-2. Install the required libraries using `pip install -r requirements.txt`.
-3. Run the application using `python main.py`.
+2. If not installed you need to execute `sudo apt-get install python3-dev`
+3. Also, if not installed you need to execute `sudo apt-get install python3-tk`
+4. Install the required libraries using `pip install -r requirements.txt`.
+5. Run the application using `python3 main.py`.
+
+## Creation of a binary or *.exe file using PyInstaller
+
+1. Run a command `pyinstaller --noconfirm --onefile --windowed --add-data "morse_encryptor/sounds/*.bin:morse_encryptor/sounds" --name "Morse De(Coder)" main.py`
+2. If command still not working try `sudo apt-get install python<specific-version>-dev`
+3. If command still not working try `sudo apt-get install python<specific-version>-tk`
+4. To create *.exe file on Windows run a command `pyinstaller --noconfirm --onefile --windowed --add-data "morse_encryptor/sounds/*.bin:morse_encryptor/sounds" --name "Morse De(Coder)" --icon=images/morse_icon.ico main.py`
 
 ## Compatibility
 
